@@ -67,18 +67,21 @@ body {
 }
 
 .signin-btn {
-    background-color: #e50914;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 9px 16px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: red; /* White background */
+  color: #333;               /* Dark text */
+  text-decoration: none;     /* Removes underline */
+  border: 1px solid #ddd;    /* Subtle border */
+  border-radius: 6px;        /* Rounded corners */
+  font-family: sans-serif;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
 .signin-btn:hover {
-    background-color: #c11119;
+  background-color: #f7f7f7;
+  border-color: #bbb;
 }
 
 /* ===== HERO TEXT ===== */

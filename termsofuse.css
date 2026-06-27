@@ -1,0 +1,12 @@
+/* ── terms-of-use page styles ── */
+
+.page-header { border-bottom-color: #95a5a6; }
+
+.page-content h1 {
+  border-left: 4px solid #95a5a6;
+  padding-left: 16px;
+}
+
+.page-content h2  { color: #95a5a6; }
+.page-content strong { color: #fff; }
+.back-btn:hover { border-color: #95a5a6; color: #95a5a6; }

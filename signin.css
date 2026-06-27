@@ -1,0 +1,326 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* ── Hero background ── */
+.hero {
+  position: fixed;
+  inset: 0;
+  background-image: url('netflixbg1.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Dark gradient overlays – top for header legibility, overall dim for form */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 18%, transparent 82%, rgba(0,0,0,0.8) 100%);
+}
+
+/* ── Layout shell ── */
+.shell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  padding: 20px 56px;
+}
+
+.logo {
+  display: block;
+  width: 167px;
+  height: auto;
+}
+
+/* SVG fallback logo (shown when netflix1.png is missing) */
+.logo-svg {
+  width: 167px;
+  height: 45px;
+}
+
+/* ── Main content ── */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px 80px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 60px 68px 40px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 28px;
+  color: #fff;
+}
+
+/* ── Form elements ── */
+.field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.field input {
+  width: 100%;
+  height: 56px;
+  background: #333;
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 16px 16px 0;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+.field input:focus {
+  border-color: #e0e0e0;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+  transform: translateY(-10px) scale(0.8);
+  color: #aaa;
+}
+
+.field label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8c8c8c;
+  font-size: 1rem;
+  pointer-events: none;
+  transform-origin: left center;
+  transition: transform 0.15s, color 0.15s;
+}
+
+/* Floating label spacer trick */
+.field input::placeholder { color: transparent; }
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 17px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  margin-top: 24px;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover { background: #c1081a; }
+.btn-primary:active { background: #a50716; }
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #737373;
+  font-size: 0.85rem;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #444;
+}
+
+.btn-code {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-code:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: #e0e0e0;
+}
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 0.82rem;
+}
+
+.remember-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.remember-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #e50914;
+  cursor: pointer;
+}
+
+.need-help {
+  color: #b3b3b3;
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.need-help:hover { text-decoration: underline; }
+
+.card-footer {
+  margin-top: 28px;
+}
+
+.card-footer p {
+  color: #737373;
+  font-size: 1rem;
+}
+
+.card-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card-footer a:hover { text-decoration: underline; }
+
+.recaptcha-note {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #737373;
+  line-height: 1.5;
+}
+
+.recaptcha-note a {
+  color: #0071eb;
+}
+
+/* ── Footer ── */
+footer {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 28px 56px 40px;
+  border-top: 1px solid #2a2a2a;
+}
+
+footer .call {
+  color: #737373;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #737373;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.1s;
+}
+
+.footer-links a:hover { color: #aaa; }
+
+.language-select {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.language-select select {
+  background: transparent;
+  border: 1px solid #737373;
+  color: #737373;
+  padding: 8px 32px 8px 36px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23737373' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.language-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.globe-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  header { padding: 16px 24px; }
+  .logo, .logo-svg { width: 124px; }
+  .card { padding: 40px 24px 32px; }
+  .card h1 { font-size: 1.6rem; }
+  footer { padding: 24px 20px 32px; }
+}

@@ -1,0 +1,12 @@
+/* ── privacy page styles ── */
+
+.page-header { border-bottom-color: #2ecc71; }
+
+.page-content h1 {
+  border-left: 4px solid #2ecc71;
+  padding-left: 16px;
+}
+
+.page-content h2  { color: #2ecc71; }
+.page-content strong { color: #fff; }
+.back-btn:hover { border-color: #2ecc71; color: #2ecc71; }

@@ -1,0 +1,12 @@
+/* ── contact-us page styles ── */
+
+.page-header { border-bottom-color: #27ae60; }
+
+.page-content h1 {
+  border-left: 4px solid #27ae60;
+  padding-left: 16px;
+}
+
+.page-content h2  { color: #27ae60; }
+.page-content strong { color: #fff; }
+.back-btn:hover { border-color: #27ae60; color: #27ae60; }

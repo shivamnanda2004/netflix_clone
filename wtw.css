@@ -1,0 +1,12 @@
+/* ── ways-to-watch page styles ── */
+
+.page-header { border-bottom-color: #3498db; }
+
+.page-content h1 {
+  border-left: 4px solid #3498db;
+  padding-left: 16px;
+}
+
+.page-content h2  { color: #3498db; }
+.page-content strong { color: #fff; }
+.back-btn:hover { border-color: #3498db; color: #3498db; }

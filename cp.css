@@ -1,0 +1,12 @@
+/* ── cookie-preferences page styles ── */
+
+.page-header { border-bottom-color: #e67e22; }
+
+.page-content h1 {
+  border-left: 4px solid #e67e22;
+  padding-left: 16px;
+}
+
+.page-content h2  { color: #e67e22; }
+.page-content strong { color: #fff; }
+.back-btn:hover { border-color: #e67e22; color: #e67e22; }
