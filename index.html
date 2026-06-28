@@ -38,64 +38,56 @@
 
 </div>
 
-<!-- Trending Now Section — CSS-only scroll via checkbox -->
+<!-- Trending Now — smooth one-card-at-a-time CSS scroll -->
 <section class="trending-section">
     <h2 class="section-title">Trending Now</h2>
     <div class="trending-wrapper">
 
-        <!-- hidden checkboxes control which page is shown -->
-        <input type="radio" name="trend-page" id="page1" class="trend-radio" checked>
-        <input type="radio" name="trend-page" id="page2" class="trend-radio">
+        <!-- 6 radio buttons, one per scroll position -->
+        <input type="radio" name="trend" id="t0" class="trend-radio" checked>
+        <input type="radio" name="trend" id="t1" class="trend-radio">
+        <input type="radio" name="trend" id="t2" class="trend-radio">
+        <input type="radio" name="trend" id="t3" class="trend-radio">
+        <input type="radio" name="trend" id="t4" class="trend-radio">
+        <input type="radio" name="trend" id="t5" class="trend-radio">
 
+        <!-- scrolling track -->
         <div class="trending-track">
-            <!-- PAGE 1: cards 1–5 -->
-            <div class="trending-card">
-                <span class="trending-num">1</span>
-                <img src="bb3.png" alt="Show 1" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">2</span>
-                <img src="bb3.png" alt="Show 2" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">3</span>
-                <img src="bb3.png" alt="Show 3" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">4</span>
-                <img src="bb3.png" alt="Show 4" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">5</span>
-                <img src="bb3.png" alt="Show 5" class="trending-img">
-            </div>
-            <!-- PAGE 2: cards 6–10 -->
-            <div class="trending-card">
-                <span class="trending-num">6</span>
-                <img src="bb3.png" alt="Show 6" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">7</span>
-                <img src="bb3.png" alt="Show 7" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">8</span>
-                <img src="bb3.png" alt="Show 8" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">9</span>
-                <img src="bb3.png" alt="Show 9" class="trending-img">
-            </div>
-            <div class="trending-card">
-                <span class="trending-num">10</span>
-                <img src="bb3.png" alt="Show 10" class="trending-img">
-            </div>
+            <div class="trending-card"><span class="trending-num">1</span><img src="bb3.png" alt="Show 1" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">2</span><img src="bb3.png" alt="Show 2" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">3</span><img src="bb3.png" alt="Show 3" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">4</span><img src="bb3.png" alt="Show 4" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">5</span><img src="bb3.png" alt="Show 5" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">6</span><img src="bb3.png" alt="Show 6" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">7</span><img src="bb3.png" alt="Show 7" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">8</span><img src="bb3.png" alt="Show 8" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">9</span><img src="bb3.png" alt="Show 9" class="trending-img"></div>
+            <div class="trending-card"><span class="trending-num">10</span><img src="bb3.png" alt="Show 10" class="trending-img"></div>
         </div>
 
-        <!-- next arrow: switches to page 2 -->
-        <label for="page2" class="scroll-arrow arrow-next">&#8250;</label>
-        <!-- prev arrow: switches back to page 1 -->
-        <label for="page1" class="scroll-arrow arrow-prev">&#8249;</label>
+        <!-- NEXT arrows: go forward one card (only shown at pos 0–4) -->
+        <label for="t1" class="arrow-btn arrow-next pos-0">&#8250;</label>
+        <label for="t2" class="arrow-btn arrow-next pos-1">&#8250;</label>
+        <label for="t3" class="arrow-btn arrow-next pos-2">&#8250;</label>
+        <label for="t4" class="arrow-btn arrow-next pos-3">&#8250;</label>
+        <label for="t5" class="arrow-btn arrow-next pos-4">&#8250;</label>
+
+        <!-- PREV arrows: go back one card (only shown at pos 1–5) -->
+        <label for="t0" class="arrow-btn arrow-prev pos-1">&#8249;</label>
+        <label for="t1" class="arrow-btn arrow-prev pos-2">&#8249;</label>
+        <label for="t2" class="arrow-btn arrow-prev pos-3">&#8249;</label>
+        <label for="t3" class="arrow-btn arrow-prev pos-4">&#8249;</label>
+        <label for="t4" class="arrow-btn arrow-prev pos-5">&#8249;</label>
+
+        <!-- dot indicators -->
+        <div class="dots">
+            <label for="t0" class="dot d0"></label>
+            <label for="t1" class="dot d1"></label>
+            <label for="t2" class="dot d2"></label>
+            <label for="t3" class="dot d3"></label>
+            <label for="t4" class="dot d4"></label>
+            <label for="t5" class="dot d5"></label>
+        </div>
 
     </div>
 </section>
