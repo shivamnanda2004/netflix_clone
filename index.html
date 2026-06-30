@@ -38,7 +38,7 @@
 
 </div>
 
-<!-- Trending Now — smooth one-card-at-a-time CSS scroll -->
+<!-- Trending Now — smooth one-card-at-a-time CSS scroll, each card opens its own modal -->
 <section class="trending-section">
     <h2 class="section-title">Trending Now</h2>
     <div class="trending-wrapper">
@@ -53,16 +53,16 @@
 
         <!-- scrolling track -->
         <div class="trending-track">
-            <div class="trending-card"><span class="trending-num">1</span><img src="bb3.png" alt="Show 1" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">2</span><img src="bb3.png" alt="Show 2" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">3</span><img src="bb3.png" alt="Show 3" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">4</span><img src="bb3.png" alt="Show 4" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">5</span><img src="bb3.png" alt="Show 5" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">6</span><img src="bb3.png" alt="Show 6" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">7</span><img src="bb3.png" alt="Show 7" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">8</span><img src="bb3.png" alt="Show 8" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">9</span><img src="bb3.png" alt="Show 9" class="trending-img"></div>
-            <div class="trending-card"><span class="trending-num">10</span><img src="bb3.png" alt="Show 10" class="trending-img"></div>
+            <a href="#show1" class="trending-card"><span class="trending-num">1</span><img src="bb3.png" alt="Show 1" class="trending-img"></a>
+            <a href="#show2" class="trending-card"><span class="trending-num">2</span><img src="bb3.png" alt="Show 2" class="trending-img"></a>
+            <a href="#show3" class="trending-card"><span class="trending-num">3</span><img src="bb3.png" alt="Show 3" class="trending-img"></a>
+            <a href="#show4" class="trending-card"><span class="trending-num">4</span><img src="bb3.png" alt="Show 4" class="trending-img"></a>
+            <a href="#show5" class="trending-card"><span class="trending-num">5</span><img src="bb3.png" alt="Show 5" class="trending-img"></a>
+            <a href="#show6" class="trending-card"><span class="trending-num">6</span><img src="bb3.png" alt="Show 6" class="trending-img"></a>
+            <a href="#show7" class="trending-card"><span class="trending-num">7</span><img src="bb3.png" alt="Show 7" class="trending-img"></a>
+            <a href="#show8" class="trending-card"><span class="trending-num">8</span><img src="bb3.png" alt="Show 8" class="trending-img"></a>
+            <a href="#show9" class="trending-card"><span class="trending-num">9</span><img src="bb3.png" alt="Show 9" class="trending-img"></a>
+            <a href="#show10" class="trending-card"><span class="trending-num">10</span><img src="bb3.png" alt="Show 10" class="trending-img"></a>
         </div>
 
         <!-- NEXT arrows: go forward one card (only shown at pos 0–4) -->
@@ -91,6 +91,199 @@
 
     </div>
 </section>
+
+<!-- ===== SHOW DETAIL MODALS (pure CSS :target popups, one per card) ===== -->
+
+<div id="show1" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster1.jpg')">
+            <img src="bb3_1.png" alt="Show 1 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 16+</span>
+                <span class="tag">Movie</span>
+                <span class="tag">Horror</span>
+                <span class="tag">Comedies</span>
+            </div>
+            <p class="modal-desc">When a man inherits a palace, he plans to host his sister's wedding there — but the venue's dark past threatens to ruin the celebration.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show2" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster2.jpg')">
+            <img src="bb3_1.png" alt="Show 2 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 13+</span>
+                <span class="tag">Series</span>
+                <span class="tag">Drama</span>
+            </div>
+            <p class="modal-desc">Add the description for show 2 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show3" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster3.jpg')">
+            <img src="bb3_1.png" alt="Show 3 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 16+</span>
+                <span class="tag">Movie</span>
+                <span class="tag">Action</span>
+            </div>
+            <p class="modal-desc">Add the description for show 3 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show4" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster4.jpg')">
+            <img src="bb3_1.png" alt="Show 4 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 7+</span>
+                <span class="tag">Series</span>
+                <span class="tag">Comedy</span>
+            </div>
+            <p class="modal-desc">Add the description for show 4 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show5" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster5.jpg')">
+            <img src="bb3_1.png" alt="Show 5 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 16+</span>
+                <span class="tag">Movie</span>
+                <span class="tag">Thriller</span>
+            </div>
+            <p class="modal-desc">Add the description for show 5 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show6" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster6.jpg')">
+            <img src="bb3_1.png" alt="Show 6 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 13+</span>
+                <span class="tag">Series</span>
+                <span class="tag">Romance</span>
+            </div>
+            <p class="modal-desc">Add the description for show 6 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show7" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster7.jpg')">
+            <img src="bb3_1.png" alt="Show 7 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 16+</span>
+                <span class="tag">Movie</span>
+                <span class="tag">Drama</span>
+            </div>
+            <p class="modal-desc">Add the description for show 7 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show8" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster8.jpg')">
+            <img src="bb3_1.png" alt="Show 8 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 16+</span>
+                <span class="tag">Movie</span>
+                <span class="tag">Comedy</span>
+            </div>
+            <p class="modal-desc">Add the description for show 8 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show9" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster9.jpg')">
+            <img src="bb3_1.png" alt="Show 9 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 7+</span>
+                <span class="tag">Series</span>
+                <span class="tag">Family</span>
+            </div>
+            <p class="modal-desc">Add the description for show 9 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="show10" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-poster" style="background-image:url('poster10.jpg')">
+            <img src="bb3_1.png" alt="Show 10 title" class="modal-title-img">
+        </div>
+        <div class="modal-body">
+            <div class="modal-tags">
+                <span class="tag">2026</span>
+                <span class="tag">U/A 16+</span>
+                <span class="tag">Movie</span>
+                <span class="tag">Horror</span>
+            </div>
+            <p class="modal-desc">Add the description for show 10 here.</p>
+            <a href="signin.html" class="get-started-btn">Get Started <span class="arrow">&#8250;</span></a>
+        </div>
+    </div>
+</div>
 
 <!-- More Reasons to Join -->
 <section class="reasons-section">
